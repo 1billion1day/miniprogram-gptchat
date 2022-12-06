@@ -1,0 +1,141 @@
+/**chat.wxss**/
+.dialog {
+  width: 100%;
+  height: 1000rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  margin: 10rpx;
+}
+
+.dialog .dialog-block {
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-top: 50rpx;
+}
+
+.dialog .dialog-block .dialog-me {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: flex-end;
+  margin: 20rpx;
+  //background-color: lightcyan;
+}
+
+.dialog .dialog-block .dialog-ai {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: flex-start;
+  margin: 20rpx;
+  //background-color: lightcyan;
+}
+
+.dialog .portrait {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //background-color: blueviolet;
+  border: solid gray 1rpx;
+  font-size: 20rpx;
+}
+
+.dialog .sentence {
+  width: 70%;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  font-size: 25rpx;
+}
+
+.dialog .sentence .sentence-me-text {
+  color: green;
+}
+
+.dialog .sentence .sentence-ai-text {
+  color: gray;
+}
+
+.dialog .right {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: flex-end;
+}
+
+.dialog .dialog-block .link-top {
+  width: 100%;
+  height: 1rpx;
+  border-top: solid #ACC0D8 1rpx;
+}
+
+.promo {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10rpx;
+  background-color: lightsteelblue;
+}
+
+.promo .promo-text {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.chat-box {
+  width: 100%;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10rpx;
+  //background-color: burlywood;
+}
+
+.chat-box .chat-box-input {
+  width: 620rpx;
+  height: 250rpx;
+  display: block;
+  box-sizing: border-box;
+  left: 0rpx;
+  top: 0rpx;
+  position: relative;
+  //background-color: white;
+}
+
+.chat-box .chat-box-button {
+  position: relative;
+  left: 220rpx;
+  top: 10rpx;
+  width: 130rpx;
+  height: 55rpx;
+  display: block;
+  background: cornflowerblue;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px gray;
+}
+
+.chat-box .chat-box-button .chat-box-button-text {
+  position: relative;
+  left: 0rpx;
+  top: 12rpx;
+  width: 130rpx;
+  display: block;
+  box-sizing: border-box;
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 25rpx;
+}

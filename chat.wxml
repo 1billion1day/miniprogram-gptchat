@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="dialog">
+        <block>
+            <view class="dialog-block">
+
+                <view class="dialog-me">
+                    <view class="sentence right">
+                        <text class="sentence-me-text">为什么海水是蓝色的？</text>
+                    </view>
+                    <view class="portrait">
+                        <text>我</text>
+                    </view>
+                </view>
+                <view class="link-top"></view>
+                <view class="dialog-ai">
+                    <view class="portrait">
+                        <text>AI</text>
+                    </view>
+                    <view class="sentence">
+                        <text class="sentence-ai-text">为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？</text>
+                    </view>
+                </view>
+                <view class="link-top"></view>
+            </view>
+        </block>
+    </view>
+    <view class="promo">
+        <text class="promo-text">注册教程</text>
+    </view>
+    <view class="chat-box">
+        <view class="chat-box-input">
+            <textarea class="chat-box-input-text" placeholder="请输入您的问题, 长按可以粘贴你的问题" placeholder-style="color: #999999"/>
+        </view>
+        <view class="chat-box-button">
+            <text class="chat-box-button-text">发送</text>
+        </view>
+    </view>
+</view>
