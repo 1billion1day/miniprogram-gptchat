@@ -1,38 +1,43 @@
 <!--index.wxml-->
 <view class="container">
     <view class="dialog">
-        <block>
+        <block wx:for="{{chatList}}" wx:for-item="chat">
             <view class="dialog-block">
-
-                <view class="dialog-me">
-                    <view class="sentence right">
-                        <text class="sentence-me-text">为什么海水是蓝色的？</text>
+                <block wx:if="{{chat.user === 0}}">
+                    <view class="dialog-me">
+                        <view class="sentence right">
+                            <text user-select class="sentence-me-text">{{chat.msg}}</text>
+                        </view>
+                        <view class="portrait">
+                            <text>我</text>
+                        </view>
                     </view>
-                    <view class="portrait">
-                        <text>我</text>
+                    <view class="link-top"></view>
+                </block>
+                <block wx:if="{{chat.user === 1}}">
+                    <view class="dialog-ai">
+                        <view class="portrait">
+                            <text>AI</text>
+                        </view>
+                        <view class="sentence">
+                            <text user-select class="sentence-ai-text">{{chat.msg}}</text>
+                        </view>
                     </view>
-                </view>
-                <view class="link-top"></view>
-                <view class="dialog-ai">
-                    <view class="portrait">
-                        <text>AI</text>
-                    </view>
-                    <view class="sentence">
-                        <text class="sentence-ai-text">为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？为什么海水是蓝色的？</text>
-                    </view>
-                </view>
-                <view class="link-top"></view>
+                    <view class="link-top"></view>
+                </block>
             </view>
         </block>
     </view>
-    <view class="promo">
-        <text class="promo-text">注册教程</text>
-    </view>
+<!--    <view class="promo">-->
+<!--        <text class="promo-text">注册教程</text>-->
+<!--    </view>-->
     <view class="chat-box">
         <view class="chat-box-input">
-            <textarea class="chat-box-input-text" placeholder="请输入您的问题, 长按可以粘贴你的问题" placeholder-style="color: #999999"/>
+            <textarea class="chat-box-input-text" placeholder="请输入您的问题, 长按可以粘贴你的问题"
+                      bindinput="i_question"
+                      placeholder-style="color: #999999"/>
         </view>
-        <view class="chat-box-button">
+        <view class="chat-box-button" bindtap="bindAskTap">
             <text class="chat-box-button-text">发送</text>
         </view>
     </view>

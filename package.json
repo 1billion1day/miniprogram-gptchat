@@ -5,11 +5,20 @@
   "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "",
+  "license": "ISC",
   "dependencies": {
-    "axios": "^1.2.1"
+    "wx-delay-loading": "^2.0.2"
   },
   "devDependencies": {
     "miniprogram-api-typings": "^2.8.3-1"
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangtai/miniprogram-gptchat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangtai/miniprogram-gptchat/issues"
+  },
+  "homepage": "https://github.com/wangtai/miniprogram-gptchat#readme"
 }

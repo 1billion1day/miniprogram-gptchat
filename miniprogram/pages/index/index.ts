@@ -1,5 +1,8 @@
 // index.ts
+import {ChatList, gptChat} from "../../utils/util";
+
 // 获取应用实例
+// @ts-ignore
 const app = getApp<IAppOption>()
 Page({
     data: {
@@ -13,8 +16,34 @@ Page({
     // 事件处理函数
     bindAskTap: async function () {
         console.log("ask " + this.data.questionText)
-        await wx.navigateTo({
-            url: '../chat/chat?text=' + this.data.questionText,
+        if (this.data.questionText.length == 0) {
+            wx.showToast({
+                title: '你想问点啥？',
+                icon: 'error',
+            })
+            return
+        }
+        ChatList.clean()
+        ChatList.add(0, this.data.questionText)
+        wx.showLoading({
+            title: '正在思考',
+        }).then(() => {
+            gptChat(this.data.questionText)
+                .then(res_data => {
+                        ChatList.add(1, res_data.message)
+                        wx.hideLoading()
+                        wx.navigateTo({
+                            url: '../chat/chat',
+                        }).then(() => {
+                        })
+                    }
+                ).catch(() => {
+                wx.hideLoading()
+                wx.showToast({
+                    title: '我的网络不太好，再问我一次吧',
+                    icon: 'error'
+                })
+            })
         })
     },
     i_question: function (res: any) {
