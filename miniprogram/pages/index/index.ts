@@ -12,7 +12,6 @@ Page({
         canIUseGetUserProfile: false,
         canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
         questionText: '',
-        modalHidden: true,
     },
     // 事件处理函数
     bindAskTap: async function () {
@@ -80,13 +79,8 @@ Page({
         })
     },
     onStudyTap: function () {
-        this.setData({
-            modalHidden: false
+        wx.navigateTo({
+            url: "../business/business"
         })
     },
-    modalCancel: function () {
-        this.setData({
-            modalHidden: true
-        })
-    }
 })

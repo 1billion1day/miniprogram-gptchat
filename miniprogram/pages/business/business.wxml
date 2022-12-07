@@ -1,0 +1,8 @@
+<view class="container">
+    <view class="title">
+        <text>长按下面图片，添加我的微信吧</text>
+    </view>
+    <view class="img">
+        <image src="../../images/qrcode-saraxl.jpeg" mode="widthFix" show-menu-by-longpress="true"></image>
+    </view>
+</view>

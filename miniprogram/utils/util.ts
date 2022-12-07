@@ -40,13 +40,16 @@ export const gptChat = async (msg: string): Promise<any> => {
 }
 
 export class ChatList {
-    public static add(user: 0 | 1, msg: string) {
+    public static add(user: 0 | 1, msg: string): string {
+        const key = `key_${new Date().getTime()}`;
         const chatlist = wx.getStorageSync('chatlist') || []
         chatlist.push({
+            key: key,
             user: user,
             msg: msg,
         })
         wx.setStorageSync('chatlist', chatlist)
+        return key
     }
 
     public static get(): [{ user: 0 | 1, msg: string }] | any {

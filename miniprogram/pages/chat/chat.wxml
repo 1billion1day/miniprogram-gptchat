@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="dialog">
-        <block wx:for="{{chatList}}" wx:for-item="chat">
-            <view class="dialog-block">
+    <scroll-view scroll-y="true" class="dialog" scroll-into-view="{{viewId}}">
+        <block wx:for="{{chatList}}" wx:key="key" wx:for-item="chat">
+            <view class="dialog-block" id="{{chat.key}}">
                 <block wx:if="{{chat.user === 0}}">
                     <view class="dialog-me">
                         <view class="sentence right">
@@ -27,15 +27,15 @@
                 </block>
             </view>
         </block>
-    </view>
-<!--    <view class="promo">-->
-<!--        <text class="promo-text">注册教程</text>-->
-<!--    </view>-->
+    </scroll-view>
+    <!--    <view class="promo">-->
+    <!--        <text class="promo-text">注册教程</text>-->
+    <!--    </view>-->
     <view class="chat-box">
         <view class="chat-box-input">
             <textarea class="chat-box-input-text" placeholder="请输入您的问题, 长按可以粘贴你的问题"
                       bindinput="i_question"
-                      placeholder-style="color: #999999"/>
+                      placeholder-style="color: #999999" value="{{questionText}}"/>
         </view>
         <view class="chat-box-button" bindtap="bindAskTap">
             <text class="chat-box-button-text">发送</text>

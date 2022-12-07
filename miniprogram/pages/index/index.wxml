@@ -18,11 +18,11 @@
         </button>
     </view>
     <view class="functions">
-        <view class="subtitle" bindtap="onStudyTap">
+        <view class="subtitle">
             <text class="subtitle-text">功能介绍</text>
         </view>
         <view class="promos">
-            <view class="promo reg-tour">
+            <view class="promo reg-tour" bindtap="onStudyTap">
                 <text class="reg-tour-text">注册教程</text>
             </view>
             <view class="promo i-want-make" bindtap="onStudyTap">
@@ -31,9 +31,4 @@
             </view>
         </view>
     </view>
-    <modal title='提示' hidden="{{modalHidden}}" bindcancel='modalCancel' bindconfirm='modalCancel'>
-        <view>
-            <image class="image" src="../../images/qrcode-saraxl.jpeg" mode='aspectFit'></image>
-        </view>
-    </modal>
 </view>
