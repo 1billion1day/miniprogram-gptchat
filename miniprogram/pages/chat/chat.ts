@@ -21,6 +21,7 @@ Page({
         // ChatList.add(1, res_data.message)
         wx.showLoading({
             title: '正在思考',
+            mask: true
         }).then(() => {
             gptChat(this.data.questionText)
                 .then(res_data => {

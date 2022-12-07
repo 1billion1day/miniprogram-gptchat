@@ -11,7 +11,8 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         canIUseGetUserProfile: false,
         canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-        questionText: ''
+        questionText: '',
+        modalHidden: true,
     },
     // 事件处理函数
     bindAskTap: async function () {
@@ -27,6 +28,7 @@ Page({
         ChatList.add(0, this.data.questionText)
         wx.showLoading({
             title: '正在思考',
+            mask: true
         }).then(() => {
             gptChat(this.data.questionText)
                 .then(res_data => {
@@ -75,6 +77,16 @@ Page({
                     hasUserInfo: true
                 })
             }
+        })
+    },
+    onStudyTap: function () {
+        this.setData({
+            modalHidden: false
+        })
+    },
+    modalCancel: function () {
+        this.setData({
+            modalHidden: true
         })
     }
 })

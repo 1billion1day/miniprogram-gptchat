@@ -10,7 +10,7 @@
                   class="input-area">
         </textarea>
 
-        <button class="share-btn">
+        <button class="share-btn" open-type="share">
             <text class="share-btn-text">分享</text>
         </button>
         <button class="ask-btn" bindtap="bindAskTap">
@@ -18,19 +18,22 @@
         </button>
     </view>
     <view class="functions">
-        <view class="subtitle">
+        <view class="subtitle" bindtap="onStudyTap">
             <text class="subtitle-text">功能介绍</text>
         </view>
         <view class="promos">
             <view class="promo reg-tour">
                 <text class="reg-tour-text">注册教程</text>
             </view>
-            <view class="promo i-want-make">
+            <view class="promo i-want-make" bindtap="onStudyTap">
                 <text class="i-want-make-text">我也要做</text>
                 <text class="mp-text">小程序</text>
             </view>
         </view>
     </view>
-<!--    <loading >正在思考...</loading>-->
-
+    <modal title='提示' hidden="{{modalHidden}}" bindcancel='modalCancel' bindconfirm='modalCancel'>
+        <view>
+            <image class="image" src="../../images/qrcode-saraxl.jpeg" mode='aspectFit'></image>
+        </view>
+    </modal>
 </view>
