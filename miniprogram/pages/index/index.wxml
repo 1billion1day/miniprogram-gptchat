@@ -1,7 +1,8 @@
 <!--index.wxml-->
 <view class="container">
     <view class="head-banner">
-        <text class="banner-title">OpenAI免费对话</text>
+        <!--        <text class="banner-title">OpenAI免费对话</text>-->
+        <image class="banner-img" src="../../images/banner.png" mode="widthFix"></image>
     </view>
     <view class="dialog">
         <textarea placeholder="请输入您的问题，长按可粘贴您的问题"
@@ -23,11 +24,13 @@
         </view>
         <view class="promos">
             <view class="promo reg-tour" bindtap="onStudyTap">
-                <text class="reg-tour-text">注册教程</text>
+                <!--                <text class="reg-tour-text">注册教程</text>-->
+                <image class="reg-tour-img" src="../../images/reg_tour.jpg"></image>
             </view>
             <view class="promo i-want-make" bindtap="onStudyTap">
-                <text class="i-want-make-text">我也要做</text>
-                <text class="mp-text">小程序</text>
+<!--                <text class="i-want-make-text">我也要做</text>-->
+<!--                <text class="mp-text">小程序</text>-->
+                <image class="reg-tour-img" src="../../images/i_want_make.jpg"></image>
             </view>
         </view>
     </view>
