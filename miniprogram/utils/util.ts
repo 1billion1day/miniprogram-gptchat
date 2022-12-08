@@ -21,7 +21,7 @@ const formatNumber = (n: number) => {
 export const gptChat = async (msg: string): Promise<any> => {
     return new Promise((resolve, reject) => {
         wx.request({
-            url: 'https://cms-api.wu.ren/weixin/chat/message',
+            url: 'https://chat.wu.ren/weixin/chat/message',
             method: 'POST',
             header: {
                 'content-type': 'application/json'

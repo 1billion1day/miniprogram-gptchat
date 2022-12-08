@@ -2,7 +2,7 @@
 <view class="container">
     <view class="head-banner">
         <!--        <text class="banner-title">OpenAI免费对话</text>-->
-        <image class="banner-img" src="../../images/banner.png" mode="widthFix"></image>
+        <image class="banner-img" src="../../images/banner.jpg" mode="widthFix"></image>
     </view>
     <view class="dialog">
         <textarea placeholder="请输入您的问题，长按可粘贴您的问题"
